@@ -1,0 +1,223 @@
+/* infopage.css */
+
+/*  top logo and navigation  */
+
+#logo {
+	filter: contrast(150%) saturate(1.25);
+	background-size: contain;
+}
+
+@media screen and (min-width: 800px) {
+    #logo {
+	    position: absolute;
+	    height: 5.5vw;
+	    top: -0.5vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+	#logo {
+		height: 10vw;
+		top: 0;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+	#hamburger_icon {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#hamburger_icon {
+		max-width: 10vw;
+		max-height: 15vw;
+		height: 15vw;
+		float: right;
+		margin-right: 2%;
+		margin-top: 6%;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#modalnavlink {
+		color: red;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 8vw;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#modallist {
+		list-style-type: none;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.top_bar {
+		height: 10vw;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnav {
+		min-width: 500px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnav {
+		height: 50%;
+		position: absolute;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnavlist {
+		margin-right: 5%;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavlist {
+		float: left;
+		margin-top: 15%;
+		display: none;
+		background-color: white;
+		border: 2px solid DarkGreen;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnavitem {
+		display: inline-block;
+		float: right;
+		margin-right: 3%;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavitem {
+		display: block;
+	}
+}
+
+#topnavlink {
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	color: red;
+}
+
+@media screen and (min-width: 800px) {
+	#topnavlink {
+		padding: 10px;
+		font-size: 1.5vw;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavlink {
+		padding: 15px;
+		text-align: left;
+		font-size: 8vw;
+	}
+}
+
+/* main body of info page */
+
+#bg_img {
+	background-image: url("flag_ingredients2.jpg");
+	background-size: 100% auto;
+}
+
+.transbox {
+	background-color: #ffffff;
+	opacity: 0.8;
+	border: 1px solid black;
+	margin: 5vw;
+}
+
+@media screen and (max-width: 799px) {
+	.mobile_header {
+		font-weight: 500;
+		font-family: Verdana, sans-serif;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.p_info {
+	    font-size: 1.5vw;
+	    margin-bottom: 1.5vw;
+	    opacity: 1;
+	    color: black;
+    }
+}
+
+@media screen and (max-width: 799px) {
+	.p_info {
+		font-size: 4.5vw;
+	}
+}
+
+#top_header {
+    font-family: "Brush Script MT", cursive;
+    color: DarkGreen;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    #top_header {
+	    font-size: 5vw;
+    }
+}
+
+/*  footer  */
+
+.footerheader {
+	text-align: center;
+	color: DarkGreen;
+}
+
+.footerheader2 {
+	text-align: center;
+	margin-left: -7.8vw;
+	color: DarkGreen;
+}
+
+.inner_header {
+	text-align: center;
+}
+
+.hours_table1 {
+	margin-right: 6.5vw;
+}
+
+.times {
+	padding-left: 5px;
+}
+
+.nyc_bg {
+	position: relative;
+	border-top: 4px solid black;
+}
+
+.nyc_bg:after {
+	content: "";
+	background-image: url("nyc_bg.jpg");
+	position: absolute;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.25;
+	background-clip: border-box;
+}
