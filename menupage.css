@@ -1,0 +1,726 @@
+/*  menupage.css */
+
+/*  top bar  */
+
+#logo {
+	filter: contrast(150%) saturate(1.25);
+	background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+    #logo {
+	    position: absolute;
+	    height: 5.5vw;
+	    top: -0.5vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	#logo {
+		height: 10vw;
+		top: 0;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#hamburger_icon {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#hamburger_icon {
+		max-width: 10vw;
+		max-height: 15vw;
+		height: 15vw;
+		float: right;
+		margin-right: 2%;
+		margin-top: 6%;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#modalnavlink {
+		color: red;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 8vw;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#modallist {
+		list-style-type: none;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.top_bar {
+		height: 10vw;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#topnav {
+		min-width: 500px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#topnav {
+		height: 50%;
+		position: absolute;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#topnavlist {
+		margin-right: 5%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#topnavlist {
+		float: left;
+		margin-top: 15%;
+		display: none;
+		background-color: white;
+		border: 2px solid DarkGreen;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#topnavitem {
+		display: inline-block;
+		float: right;
+		margin-right: 3%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#topnavitem {
+		display: block;
+	}
+}
+
+#topnavlink {
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	color: red;
+}
+
+@media screen and (min-width: 768px) {
+	#topnavlink {
+		padding: 10px;
+		font-size: 1.5vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#topnavlink {
+		padding: 15px;
+		text-align: left;
+		font-size: 8vw;
+	}
+}
+
+/*  main image and writing  */
+
+#demo_img {
+	position: relative;
+	z-index: -1;
+	filter: contrast(125%) blur(1px);
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	margin-top: 1%;
+	border: 1px black solid;
+}
+
+#background_image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#name {
+	z-index: 2;
+	position: absolute;
+	color: white;
+	text-align: center;
+	font-size: 15vw;
+	top: -15%;
+	padding: 15%;
+	text-shadow: 2px 1px 6px #404040,
+	             -1px 0px 6px #404040;
+}
+
+@media screen and (min-width: 576px) {
+	#name {
+		left: 12%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	#name {
+		left: 16%;
+	}
+}
+
+/*  menu navigation  */
+
+.linkstyle {
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+	margin-left: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .linkstyle {
+	    font-size: 1.5vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	.linkstyle {
+		font-size: 5.5vw;
+	}
+}
+
+a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
+	color: red;
+}
+
+@media screen and (max-width: 767px) {
+	#menunav {
+		text-align: center;
+	}
+}
+
+/*  menu headings */
+
+.menuheadings {
+	margin-top: 0;
+	text-align: center;
+	font-size: 3.5vw;
+	font-family: sans-serif;
+	background: -webkit-linear-gradient(green, white, red);
+	background: -moz-linear-gradient(yellow, red, yellow);
+	background: -ms-linear-gradient(yellow, red, yellow);
+	color: white;
+	letter-spacing: 0.2vw;
+	text-shadow: 2px 1px 2px black,
+	             -1px 0px 2px black;
+}
+
+
+@media screen and (max-width: 767px) {
+	.menuheadings {
+		display: none;
+	}
+}
+
+.submenuheadings {
+	text-align: center;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: red;
+	display: block;
+	margin: auto;
+	padding-bottom: 1vw;
+	padding-top: 2%;
+}
+
+@media screen and (min-width: 768px) {
+	.submenuheadings {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.submenuheadings {
+		font-size: 7vw;
+	}
+}
+
+/*  appetizers menu  */
+
+.app_item {
+	font-size: 1.5vw;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+.app_item_price {
+	text-align: right;
+	font-size: 1.5vw;
+	line-height: 1em;
+}
+
+.addition {
+	font-weight: lighter;
+	font-size: 1.2vw;
+	margin-top: -1%;
+	font-style: italic;
+}
+
+.description {
+	font-weight: lighter;
+	font-size: 1vw;
+	font-style: italic;
+	line-height: 1.2em;
+}
+
+/*  wings menu  */
+
+.wings_size {
+	font-size: 1.5vw;
+	text-align: center;
+	font-weight: bold;
+}
+
+.wings_price {
+	font-size: 1.2vw;
+	text-align: center;
+}
+
+.sauces {
+	font-size: 1.4vw;
+	text-align: center;
+	font-weight: bold;
+	color: red;
+}
+
+.wings_sauces {
+	font-size: 1.2vw;
+	text-align: center;
+	font-style: italic;
+}
+
+/*  pizza  */
+
+.pizza_item {
+	font-size: 1.5vw;
+	font-weight: bold;
+}
+
+.pizza_size {
+	font-size: 1.5vw;
+	font-weight: bold;
+	text-align: center;
+}
+
+.pizza_description {
+	margin-top: -1%;
+	font-size: 1.2vw;
+	font-style: italic;
+	line-height: 1em;
+}
+
+.pizza_price {
+	margin-top: -1%;
+	font-size: 1.2vw;
+	text-align: center;
+	line-height: 1em;
+}
+
+/* specials  */
+
+.special_price {
+	font-size: 1.5vw;
+	text-align: center;
+	line-height: 1em;
+}
+
+/*  footer  */
+
+.footerheader {
+	color: DarkGreen;
+	text-align: center;
+}
+
+.footerheader2 {
+	color: DarkGreen;
+	text-align: center;
+	margin-left: -7.8vw;
+}
+
+.inner_header {
+	text-align: center;
+}
+
+.hours_table1 {
+	margin-right: 6.5vw;
+}
+
+.times {
+	padding-left: 5px;
+}
+
+.nyc_bg {
+	position: relative;
+	border-top: 4px solid black;
+}
+
+.nyc_bg:after {
+	content: "";
+	background-image: url("nyc_bg.jpg");
+	position: absolute;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.25;
+	background-clip: border-box;
+}
+
+/*  MOBILE MENU  */
+
+@media screen and (max-width: 767px) {
+	#mobilemenunavigation {
+		display: block;
+	}
+}
+
+/*  APPETIZERS MOBILE  */
+
+@media screen and (max-width: 767px) {
+	#appetizersmobile {
+		display: none;
+	}
+}
+
+.app_item_mobile {
+	font-weight: bold;
+}
+
+.addition_mobile {
+	font-style: italic;
+	line-height: 1em;
+}
+
+@media screen and (min-width: 576px) {
+	.addition_mobile {
+		font-size: 2.5vw;
+		margin-top: -1%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.addition_mobile {
+		font-size: 3.5vw;
+		margin-top: -2%;
+	}
+}
+
+.wings_size_mobile {
+	font-weight: bold;
+	text-align: center;
+	font-size: 4vw;
+}
+
+.wings_price_mobile {
+	font-size: 3.5vw;
+	text-align: center;
+}
+
+.sauces_mobile {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+}
+
+.sauces_selection_mobile {
+	font-style: italic;
+	text-align: center;
+}
+
+/*  PIZZA MOBILE  */
+
+@media screen and (max-width: 767px) {
+	#pizzamobile {
+		display: none;
+	}
+}
+
+.pizza_size_mobile {
+	text-align: center;
+	font-weight: bold;
+	font-size: 4vw;
+}
+
+.pizza_item_mobile {
+	font-weight: bold;
+	font-size: 4vw;
+}
+
+.pizza_price_mobile {
+	text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+	.pizza_price_mobile {
+		font-size: 2.8vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.pizza_price_mobile {
+		font-size: 3.2vw;
+	}
+}
+
+.pizza_description_mobile {
+	font-style: italic;
+	line-height: 1em;
+}
+
+@media screen and (min-width: 576px) {
+	.pizza_description_mobile {
+		font-size: 2.8vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.pizza_description_mobile {
+		font-size: 3.2vw;
+	}
+}
+
+/*  ROLLS MOBILE  */
+
+@media screen and (max-width: 767px) {
+	#rollsmobile {
+		display: none;
+	}
+}
+
+.rolls_sizes_mobile {
+	font-weight: bold;
+	text-align: center;
+}
+
+.rolls_prices_mobile {
+	text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+	.rolls_prices_mobile {
+		font-size: 2.8vw;
+    }
+}
+
+.rolls_item_mobile {
+	font-weight: bold;
+	font-size: 4vw;
+}
+
+@media screen and (min-width: 576px) {
+	.rolls_item_mobile {
+		line-height: 1em;
+	}
+}
+
+.rolls_item_size_mobile {
+	text-align: center;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 576px) {
+	.rolls_item_size_mobile {
+		font-size: 3.5vw;
+		line-height: 1em;
+	}
+}
+
+.rolls_description_mobile {
+	font-style: italic;
+	line-height: 1em;
+}
+
+@media screen and (min-width: 576px) {
+	.rolls_description_mobile {
+		font-size: 2.8vw;
+		margin-top: 1%;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.rolls_description_mobile {
+		font-size: 3.2vw;
+		margin-top: -2%;
+	}
+}
+
+.rolls_item_price_mobile {
+	text-align: center;
+	font-size: 3.2vw;
+}
+
+/*  Salads mobile  */
+
+@media screen and (max-width: 767px) {
+	#saladsmobile {
+		display: none;
+	}
+}
+
+.app_price_mobile {
+	text-align: right;
+}
+
+/*  Subs mobile  */
+
+@media screen and (max-width: 767px) {
+	#subsmobile {
+		display: none;
+	}
+}
+
+.subs_item_mobile {
+	font-weight: bold;
+	font-size: 4vw;
+	line-height: 1em;
+}
+
+.subs_price_mobile {
+	font-size: 4vw;
+	text-align: right;
+}
+
+.subs_description_mobile {
+	font-style: italic;
+	line-height: 1em;
+}
+
+@media screen and (min-width: 576px) {
+	.subs_description_mobile {
+		font-size: 2.8vw;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.subs_description_mobile {
+		font-size: 3.5vw;
+    }
+}
+
+/*  Pasta mobile  */
+
+@media screen and (max-width: 767px) {
+	#pastamobile {
+		display: none;
+	}
+}
+
+.pasta_selection_mobile {
+	font-style: italic;
+	text-align: center;
+	line-height: 1em;
+}
+
+.pasta_item_mobile {
+	font-weight: bold;
+	font-size: 4vw;
+	line-height: 1em;
+}
+
+.pasta_price_mobile {
+	font-size: 4vw;
+	text-align: right;
+	line-height: 1em;
+}
+
+.pasta_description_mobile {
+	font-style: italic;
+	line-height: 1em;
+}
+
+@media screen and (min-width: 576px) {
+	.pasta_description_mobile {
+		font-size: 2.8vw;
+    }
+}
+
+@media screen and (max-width: 575px) {
+	.pasta_description_mobile {
+		font-size: 3.5vw;
+	}
+}
+
+/*  Desserts mobile  */
+
+@media screen and (max-width: 767px) {
+	#dessertsmobile {
+		display: none;
+	}
+}
+
+.dessert_item_mobile {
+	font-weight: bold;
+	font-size: 4vw;
+	line-height: 1em;
+}
+
+.dessert_price_mobile {
+	font-size: 4vw;
+	text-align: right;
+	line-height: 1em;
+}
+
+/*  Specials mobile  */
+
+@media screen and (max-width: 767px) {
+	#specialsmobile {
+		display: none;
+	}
+}
+
+.special_item_mobile {
+	font-weight: bold;
+	line-height: 1em;
+}
+
+@media screen and (max-width: 575px) {
+	.special_item_mobile {
+		font-size: 4vw;
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.special_item_mobile {
+		font-size: 3vw;
+	}
+}
+
+.special_price_mobile {
+	font-size: 6vw;
+	text-align: right;
+	line-height: 1em;
+}
+
+.special_size_mobile {
+	font-weight: bold;
+	text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+	.special_size_mobile {
+		font-size: 3vw;
+	}
+}
+
+.special_price_mobile2 {
+	text-align: center;
+	font-size: 5vw;
+}
