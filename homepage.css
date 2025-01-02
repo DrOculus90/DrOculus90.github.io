@@ -1,0 +1,352 @@
+/*  homepage.css */
+
+/*  top bar  */
+
+#logo {
+	filter: contrast(150%) saturate(1.25);
+	background-size: contain;
+}
+
+@media screen and (min-width: 800px) {
+    #logo {
+	    position: absolute;
+	    height: 5.5vw;
+	    top: -0.5vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+	#logo {
+		height: 10vw;
+		top: 0;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#hamburger_icon {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#hamburger_icon {
+		max-width: 10vw;
+		max-height: 15vw;
+		height: 15vw;
+		float: right;
+		margin-right: 2%;
+		margin-top: 6%;
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#modalnavlink {
+		color: red;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 8vw;
+		padding: 20px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#modallist {
+		list-style-type: none;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.top_bar {
+		height: 10vw;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnav {
+		min-width: 500px;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnav {
+		height: 50%;
+		position: absolute;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnavlist {
+		margin-right: 5%;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavlist {
+		float: left;
+		margin-top: 15%;
+		display: none;
+		background-color: white;
+		border: 2px solid DarkGreen;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	#topnavitem {
+		display: inline-block;
+		float: right;
+		margin-right: 3%;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavitem {
+		display: block;
+	}
+}
+
+#topnavlink {
+	font-family: Arial;
+	font-weight: bold;
+	text-decoration: none;
+	display: block;
+	color: red;
+}
+
+@media screen and (min-width: 800px) {
+	#topnavlink {
+		padding: 10px;
+		font-size: 1.5vw;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#topnavlink {
+		padding: 15px;
+		text-align: left;
+		font-size: 8vw;
+	}
+}
+
+/*  main image and writing */
+
+#demo_img {
+	position: relative;
+	z-index: -1;
+	filter: contrast(125%) blur(1px);
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	margin-top: 1%;
+	border: 1px black solid;
+}
+
+#background_image {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#name {
+	z-index: 2;
+	position: absolute;
+	color: white;
+	text-align: center;
+	font-size: 8vw;
+	top: -35%;
+	padding: 15%;
+	text-shadow: 2px 1px 6px #404040,
+	             -1px 0px 6px #404040;
+}
+
+.empty:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+hr {
+	border: 2px solid black;
+}
+
+/*  Buttons  */
+
+
+#button {
+	background-color: red;
+	display: block;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+@media screen and (min-width: 800px) {
+	#button {
+		font-size: 4vw;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#button {
+		font-size: 7vw;
+		display: block;
+		margin: auto;
+	}
+}
+
+#button_text {
+	text-decoration: none;
+	color: white;
+}
+
+.buttons {
+	position: relative;
+	text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+	.buttons {
+		margin-top: 2vw;
+		margin-bottom: 2vw;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	.buttons {
+		width: 100%;
+		margin-top: 12vw;
+		margin-bottom: 10vw;
+		display: block;
+	}
+}
+
+/*  Main content  */
+
+.bg_texture {
+	position: relative;
+}
+
+.bg_texture:after {
+	content: "";
+	background-image: url("wall.jpg");
+	position: absolute;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.25;
+	background-clip: border-box;
+}
+
+#ingredients {
+	height: 60%;
+	position: relative;
+	border-radius: 4px;
+}
+
+@media screen and (min-width: 800px) {
+	#ingredients {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 799px) {
+	#ingredients {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media screen and (min-width: 800px) {
+    .home_headers {
+	    font-weight: lighter;
+	    font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+	.home_headers {
+	    font-weight: lighter;
+	    font-size: 8vw;
+		text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home_paragraphs {
+	    font-size: 1.1vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .home_paragraphs {
+	    font-size: 4vw;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home_headers2 {
+	    padding-top: 9vw;
+	    font-weight: lighter;
+	    font-size: 3.2vw;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .home_headers2 {
+	    padding-top: 5vw;
+	    font-weight: lighter;
+	    font-size: 8vw;
+		text-align: center;
+    }
+}
+
+/*  footer  */
+
+.footerheader {
+	text-align: center;
+	color: DarkGreen;
+}
+
+.footerheader2 {
+	text-align: center;
+	margin-left: -7.8vw;
+	color: DarkGreen;
+}
+
+.inner_header {
+	text-align: center;
+}
+
+.hours_table1 {
+	margin-right: 6.5vw;
+}
+
+.times {
+	padding-left: 5px;
+}
+
+.nyc_bg {
+	position: relative;
+	border-top: 4px solid black;
+}
+
+.nyc_bg:after {
+	content: "";
+	background-image: url("nyc_bg.jpg");
+	position: absolute;
+	background-size: cover;
+	top: 0;
+	left: 0;
+	width: 110%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.25;
+	background-clip: border-box;
+}
