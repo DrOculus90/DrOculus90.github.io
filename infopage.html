@@ -1,0 +1,162 @@
+<!-- infopage.html -->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="infopage.css">
+		<script src="infopage.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	    <script src="order_modal_script.js"></script>
+	    <link rel="stylesheet" href="./css/all.min.css">
+	</head>
+	<body>
+	    <div class="container-fluid">
+		    <div class="row">
+			    <div class="col-2 top_bar">
+				    <a href="homepage.html">
+					    <img id="logo" src="logo.png" />
+					</a>
+				</div>
+				<div class="col-10 top_bar">
+			    	<nav id="topnav">
+	                    <ul id="topnavlist">
+		                    <li id="topnavitem"><a id="topnavlink" href="tel:4076958990">CALL</a></li>
+		    	        	<li id="topnavitem"><a id="topnavlink" href="infopage.html">INFO</a></li>
+				            <li id="topnavitem"><a id="topnavlink" href="menupage.html">MENU</a></li>
+				            <li id="topnavitem"><a id="topnavlink" href="homepage.html">HOME</a></li>
+				        	<li id="topnavitem"><a id="topnavlink" href="https://www.italianexpressoflongwood.com/">ORDER ONLINE</a></li>
+		    	        </ul>
+			        </nav>
+			    <!--<a href="javascript:void(0);" onclick="hamburger()">
+			            <img id="hamburger_icon" src="hamburger_icon.png" />
+			        </a> -->
+					
+					<!-- Button to open the modal -->
+					<i class="fa-solid fa-bars fa-lg" data-toggle="modal" data-target="#modalNav" id="hamburger_icon"></i>
+					
+					<!-- The Modal -->
+					<div class="modal" id="modalNav">
+					    <div class="modal-dialog">
+						    <div class="modal-content">
+							    <!-- Modal body -->
+								<div class="modal-body">
+								    <ul id="modallist">
+									    <li><a id="modalnavlink" href="https://www.italianexpressoflongwood.com/">ORDER ONLINE</a></li>
+										<li><a id="modalnavlink" href="homepage.html">HOME</a></li>
+										<li><a id="modalnavlink" href="menupage.html">MENU</a></li>
+										<li><a id="modalnavlink" href="infopage.html">INFO</a></li>
+										<li><a id="modalnavlink" href="tel:4076958990">CALL</a></li>
+									</ul>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+								    <i class="fa-solid fa-circle-xmark" data-dismiss="modal"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row">
+			    <div class="col-sm-12" id="bg_img">
+				    <div class="transbox">
+					    <h1 id="top_header">About Us</h1>
+						<h2 class="display-4 d-none d-sm-block">Family Owned and Operated</h2>
+						<h4 class="d-sm-none mobile_header">Family Owned and Operated</h4>
+						<p class="p_info">Nothing beats the flavor of authentic, homemade NY style pizza fresh from the oven.
+				    	Our family has spent years perfecting the art of hand-tossed pies, built from scratch,
+						so that you can enjoy the mouthwatering taste of cheesy goodness in every bite.</p>
+						<h2 class="display-4 d-none d-sm-block">A Plethora of Choices</h2>
+						<h4 class="d-sm-none mobile_header">A Plethora of Choices</h4>
+					    <p class="p_info">Italian cuisine meets New York flair in our menu. A fusion
+           	        	of the best of both worlds provides you with filling subs, delectable dishes, tasty
+			        	salads, and hot wings that pack a punch! Whether lunch or dinner, we have something
+			        	for everyone to enjoy.</p>
+						<h2 class="display-4 d-none d-sm-block">Our Promise</h2>
+						<h4 class="d-sm-none mobile_header">Our Promise</h4>
+					    <p class="p_info">We promise to provide you with the best quality food by sourcing
+           	        	the freshest local ingredients and hand-making each item with care.
+           	        	We take pride in our craft, and it's a difference you can definitely
+           	        	taste. Whether you dine with us or we deliver to your door, our
+           	        	family is here for you.</p>
+					</div>
+				</div>
+			</div>
+			<!-- FOOTER -->
+			
+			<div class="row nyc_bg">
+			    <div class="col-md-2">
+				</div>
+				<div class="col-md-3">
+				    <div class="d-flex flex-column">
+					    <h3 class="footerheader">Our Location</h3>
+						<div class="d-inline-flex justify-content-center">
+						    <i class="fa-solid fa-location-dot align-self-center pr-2" style="height:2vw;"></i>
+						    <p class="contact_info">
+						        600 N US Hwy 17 92
+						        <br />
+						        Longwood, FL 32750
+						    </p>
+						</div>
+						<h3 class="footerheader">Contact Us</h3>
+						<div class="d-inline-flex justify-content-center">
+						    <i class="fa-solid fa-phone pt-1 pr-2"></i>
+						    <p class="contact_info">
+						    	(407) 695-8990
+						    </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-6">
+				    <h3 class="footerheader2">Hours of Operations</h3>
+					<div class="d-inline-flex justify-content-center">
+					    <div class="hours_table1">
+						    <h4 class="inner_header">Take-Out</h4>
+							<table class="hours">
+							    <tr>
+								    <td class="days">Monday - Thursday</td>
+									<td class="times">11am - 8:45pm</td>
+								</tr>
+								<tr>
+								    <td class="days">Friday & Saturday</td>
+								    <td class="times">11am - 9:45pm</td>
+							    </tr>
+							    <tr>
+								    <td class="days">Sunday</td>
+								    <td class="times">Closed</td>
+							    </tr>
+							</table>
+						</div>
+					    <div class="hours_table2">
+						    <h4 class="inner_header">Delivery</h4>
+							<table class="hours">
+							    <tr>
+								    <td class="days">Monday - Thursday</td>
+									<td class="times">11am - 8:30pm</td>
+								</tr>
+								<tr>
+								    <td class="days">Friday & Saturday</td>
+								    <td class="times">11am - 9:30pm</td>
+							    </tr>
+							    <tr>
+								    <td class="days">Sunday</td>
+								    <td class="times">Closed</td>
+							    </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-0">
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,6508 @@
+<!--  menupage.html  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="menupage.css">
+		<script src="infopage.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	    <script src="menupage.js"></script>
+	    <link rel="stylesheet" href="./css/all.min.css">
+	</head>
+	<body>
+	    <div class="container-fluid">
+		    <div class="row">
+			    <div class="col-2 top_bar">
+				    <a href="homepage.html">
+					    <img id="logo" src="logo.png" />
+					</a>
+				</div>
+				<div class="col-10 top_bar">
+			    	<nav id="topnav">
+	                    <ul id="topnavlist">
+		                    <li id="topnavitem"><a id="topnavlink" href="tel:4076958990">CALL</a></li>
+		    	        	<li id="topnavitem"><a id="topnavlink" href="infopage.html">INFO</a></li>
+				            <li id="topnavitem"><a id="topnavlink" href="menupage.html">MENU</a></li>
+				            <li id="topnavitem"><a id="topnavlink" href="homepage.html">HOME</a></li>
+				        	<li id="topnavitem"><a id="topnavlink" href="https://www.italianexpressoflongwood.com/">ORDER ONLINE</a></li>
+		    	        </ul>
+			        </nav>
+			    <!--<a href="javascript:void(0);" onclick="hamburger()">
+			            <img id="hamburger_icon" src="hamburger_icon.png" />
+			        </a> -->
+					
+					<!-- Button to open the modal -->
+					<i class="fa-solid fa-bars fa-lg" data-toggle="modal" data-target="#modalNav" id="hamburger_icon"></i>
+					
+					<!-- The Modal -->
+					<div class="modal" id="modalNav">
+					    <div class="modal-dialog">
+						    <div class="modal-content">
+							    <!-- Modal body -->
+								<div class="modal-body">
+								    <ul id="modallist">
+									    <li><a id="modalnavlink" href="https://www.italianexpressoflongwood.com/">ORDER ONLINE</a></li>
+										<li><a id="modalnavlink" href="homepage.html">HOME</a></li>
+										<li><a id="modalnavlink" href="menupage.html">MENU</a></li>
+										<li><a id="modalnavlink" href="infopage.html">INFO</a></li>
+										<li><a id="modalnavlink" href="tel:4076958990">CALL</a></li>
+									</ul>
+								</div>
+								<!-- Modal footer -->
+								<div class="modal-footer">
+								    <i class="fa-solid fa-circle-xmark" data-dismiss="modal"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row">
+			    <div id="background_image">
+				    <img id="main_img" src="main_img2.jpg" style="width:100%;height:20%;"/>
+	    		    <div id="name">
+						MENU
+				    </div>
+			    </div>
+			</div>
+			<!--
+			
+			    Desktop Menu Navigation
+				
+				                        -->
+			<div class="row d-none d-md-block">
+			    <div class="col-md-12">
+			        <nav class="navbar navbar-expand-sm stickytop" id="menunav">
+		                <ul class="nav justify-content-center">
+					        <li class="nav-item">
+						        <a class="nav-link linkstyle" href="#appetizers">APPETIZERS</a>
+    						</li>
+	    					<li class="nav-item">
+		    				    <a class="nav-link linkstyle" href="#pizza">PIZZA</a>
+			    			</li>
+				    		<li class="nav-item">
+					    	    <a class="nav-link linkstyle" href="#rolls">CALZONES, ROLLS, &amp; STROMBOLIS</a>
+						    </li>
+    						<li class="nav-item">
+	    					    <a class="nav-link linkstyle" href="#salads">SALADS</a>
+		    				</li>
+			    			<li class="nav-item">
+				    		    <a class="nav-link linkstyle" href="#subs">SUBS &amp; WRAPS</a>
+					    	</li>
+						    <li class="nav-item">
+    						    <a class="nav-link linkstyle" href="#entrees">ENTR&Eacute;ES</a>
+	    					</li>
+		    				<li class="nav-item">
+			    			    <a class="nav-link linkstyle" href="#desserts">DESSERTS</a>
+				    		</li>
+					    	<li class="nav-item">
+						        <a class="nav-link linkstyle" href="#specials">SPECIALS</a>
+					    	</li>
+			            </ul>
+		            </nav>
+				</div>
+			</div>
+			<!--
+			
+			    Mobile Menu Navigation
+				
+				                        -->
+			<div id="mobilemenunavigation">
+				<div class="row d-block d-md-none">
+			    	<div class="col-12">
+			        	<nav class="navbar justify-content-center" id="menunav">
+		                	<ul class="nav flex-column">
+					        	<li class="nav-item">
+						        	<a class="nav-link linkstyle" onclick="show_appetizers()">APPETIZERS</a>
+    							</li>
+	    						<li class="nav-item">
+		    				    	<a class="nav-link linkstyle" onclick="show_pizza()">PIZZA</a>
+			    				</li>
+				    			<li class="nav-item">
+					    	    	<a class="nav-link linkstyle" onclick="show_rolls()">CALZONES, ROLLS, &amp; STROMBOLIS</a>
+						    	</li>
+    							<li class="nav-item">
+	    					    	<a class="nav-link linkstyle" onclick="show_salads()">SALADS</a>
+		    					</li>
+			    				<li class="nav-item">
+				    		    	<a class="nav-link linkstyle" onclick="show_subs()">SUBS &amp; WRAPS</a>
+					    		</li>
+						    	<li class="nav-item">
+    						    	<a class="nav-link linkstyle" onclick="show_entrees()">ENTR&Eacute;ES</a>
+	    						</li>
+		    					<li class="nav-item">
+			    			    	<a class="nav-link linkstyle" onclick="show_desserts()">DESSERTS</a>
+				    			</li>
+					    		<li class="nav-item">
+						        	<a class="nav-link linkstyle" onclick="show_specials()">SPECIALS</a>
+					    		</li>
+			            	</ul>
+		            	</nav>
+					</div>
+				</div>
+			</div>
+			<!--  
+			
+			        APPETIZERS
+					  
+					            -->
+			<div id="appetizersdesktop" class="d-none d-md-block">
+			    <div class="row">
+				    <div class="col-12">
+					    <a id="appetizers"><h1 class="menuheadings">APPETIZERS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">APPETIZERS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Garlic Knots (6)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Garlic Bread
+							<p class="addition">add cheese for $2</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    2.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Breadsticks (6)
+							<p class="addition">add cheese for $2</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    4.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Mozzarella Sticks (5)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    French Fries
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chicken Fingers (5)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    7.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Jalape&#241;o Poppers (6)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Onion Rings
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Stuffed Mushrooms
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    NY Express
+							<p class="description">Mozzarella sticks (2), jalape&#241o poppers (2), <br>onion rings, and french fries</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">WINGS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:2vw">
+				    <div class="col-3">
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    10 Piece
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    20 Piece
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    30 Piece
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:2vw">
+				    <div class="col-3">
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    22.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    30.99
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="sauces">
+						    Sauces:
+						</div>
+						<div class="wings_sauces">
+						    Mild, Hot, BBQ, Honey Mustard,
+							Teriaki, Hot Garlic, Mild Garlic
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SIDES</h2>
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Spaghetti w/ marinara
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Saut&eacute;ed Spinach
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Saut&eacute;ed Broccoli
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Side of Alfredo Sauce (12oz.)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Meatballs (2)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Sausage (2)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Side of Meat Sauce (12oz.)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    7.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Greek Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    3.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Caesar Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tossed Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    2.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			
+			<!--
+			
+			    APPETIZERS MOBILE
+				   
+				                    -->
+			<div id="appetizersmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_appetizers()"></i>
+					</div>
+				    <div class="col-10">
+					    <h2 class="submenuheadings">APPETIZERS</h2>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Garlic Knots (6)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Garlic Bread
+						</div>
+						<p class="addition_mobile">add cheese for $2</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    2.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Breadsticks (6)
+						</div>
+						<p class="addition_mobile">add cheese for $2</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    4.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Mozzarella Sticks (5)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    French Fries
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Chicken Fingers (5)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    7.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Jalape&#241;o Poppers (5)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Onion Rings
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Stuffed Mushrooms
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    NY Express
+						</div>
+						<p class="addition_mobile">Mozzarella sticks (2), jalape&#241;o poppers (2), onion rings, <br>&amp; french fries</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">WINGS</h2>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-3">
+					</div>
+					<div class="col-2">
+					    <div class="wings_size_mobile">
+						    10 pc
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size_mobile">
+						    20 pc
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size_mobile">
+						    30 pc
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-3">
+					</div>
+					<div class="col-2">
+					    <div class="wings_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price_mobile">
+						    30.99
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <div class="sauces_mobile">
+						    Sauces:
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-2">
+					</div>
+					<div class="col-8">
+					    <div class="sauces_selection_mobile">
+					        Mild, Hot, BBQ, Honey Mustard, <br>Teriaki, Hot Garlic, Mild Garlic
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SIDES</h2>
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Spaghetti w/ marinara
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Saut&eacute;ed Spinach
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Saut&eacute;ed Broccoli
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Side of Alfredo Sauce (12oz.)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Meatballs (2)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Sausage (2)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Side of Meat Sauce (12oz.)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    7.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Greek Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Caesar Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    3.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Tossed Side Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_price_mobile">
+						    2.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+			</div>
+			<!--  
+			
+			        PIZZA
+					  
+					            -->
+			<div id="pizzadesktop" class="d-none d-md-block">
+			    <div class="row">
+				    <div class="col-12">
+					    <a id="pizza"><h1 class="menuheadings">PIZZA</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">CREATE YOUR OWN PIZZA</h2>
+					</div>
+				</div>
+				<div class="row" style="height:2vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    Medium 12"
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    Large 14"
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    X-Large 16"
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+						    Jumbo 18"
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:2vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    10.99 (2.70)
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    12.99 (3.00)
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    14.99 (3.30)
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_price">
+						    16.99 (3.70)
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="sauces">
+						    Toppings:
+						</div>
+						<div class="wings_sauces">
+						    Extra Cheese, Bacon, Banana Peppers, Black Olives, Broccoli, Garlic, Green Peppers, Ham,
+                            Meatballs, Mushrooms, Onions, Pepperoni, Pineapple, Sausage, Spinach, Tomatoes
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class=="row" style="height:2vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SPECIALTY PIZZA</h2>
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Alfredo Chicken Pizza
+					    </div>
+						<p class="pizza_description">Grilled chicken, alfredo sauce, parmesan, &amp; Italian spice</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Alfredo Shrimp Pizza
+					    </div>
+						<p class="pizza_description">Shrimp, alfredo sauce, parmesan, &amp; Italian spice</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        BBQ Chicken Pizza
+					    </div>
+						<p class="pizza_description">Grilled chicken &amp; BBQ sauce</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Bianca Pizza
+					    </div>
+						<p class="pizza_description">Fresh garlic, ricotta cheese, &amp; mozzarella cheese (no red sauce)</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    12.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    15.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Bruschetta Pizza
+					    </div>
+						<p class="pizza_description">Feta cheese, mozzarella cheese, fresh garlic, diced tomato, &amp; basil (no red sauce)</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    13.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    16.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    20.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Carbonara Pizza
+					    </div>
+						<p class="pizza_description">Bacon, olive oil, eggs, garlic, &amp; onions</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    18.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Deluxe Pizza
+					    </div>
+						<p class="pizza_description">Pepperoni, sausage, mushrooms, onions, green peppers, &amp; black olives</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    16.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Deluxe Chicken Pizza
+					    </div>
+						<p class="pizza_description">Grilled chicken, onions, green peppers, mushrooms, black olives, &amp; fresh garlic</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    18.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Shrimp Chicken Pizza
+					    </div>
+						<p class="pizza_description">Shrimp, onions, green peppers, mushrooms, black olives, &amp; garlic</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    18.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    20.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Greek Pizza
+					    </div>
+						<p class="pizza_description">Feta cheese, diced tomato, spinach, fresh garlic, &amp; mozzarella cheese</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    17.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    20.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Hawaiian Pizza
+					    </div>
+						<p class="pizza_description">Ham &amp; pineapple</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    13.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    16.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Meat Lover's Pizza
+					    </div>
+						<p class="pizza_description">Ham, bacon, pepperoni, &amp; sausage</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    15.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    26.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Steak Pizza
+					    </div>
+						<p class="pizza_description">Steak, onions, &amp; green peppers</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    18.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Tomato &amp; Basil Pizza
+					    </div>
+						<p class="pizza_description">Tomato slices, fresh basil, &amp; fresh garlic (red sauce optional)</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    13.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    16.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    19.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    22.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Veggie Lover's Pizza
+					    </div>
+						<p class="pizza_description">Tomato, green peppers, onions, spinach, broccoli, mushrooms, fresh garlic, &amp; black olives</p>
+					</div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        12"
+					    </div>
+						<div class="pizza_price">
+						    14.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    18.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    21.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">STUFFED PIZZA</h2>
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Deluxe Stuffed Pizza
+					    </div>
+						<p class="pizza_description">Ham, salami, pepperoni, provolone, green peppers, onions, &amp; mozzarella cheese</p>
+					</div>
+					<div class="col-1">
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    27.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    31.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    34.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Meat Lover's Stuffed Pizza
+					    </div>
+						<p class="pizza_description">Ham, pepperoni, sausage, bacon, &amp; mozzarella cheese</p>
+					</div>
+					<div class="col-1">
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    27.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    31.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    34.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height: 5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Veggie Lover's Stuffed Pizza
+					    </div>
+						<p class="pizza_description">Spinach, broccoli, mushrooms, green peppers, onions, <br>fresh garlic, &amp; mozzarella cheese</p>
+					</div>
+					<div class="col-1">
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        14"
+					    </div>
+						<div class="pizza_price">
+						    25.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        16"
+					    </div>
+						<div class="pizza_price">
+						    29.99
+						</div>
+				    </div>
+					<div class="col-1">
+				        <div class="pizza_size">
+					        18"
+					    </div>
+						<div class="pizza_price">
+						    32.99
+						</div>
+				    </div>
+					<div class="col-2">
+					</div>
+				</div>
+			</div>
+			
+			<!--
+			
+			        PIZZA MOBILE
+					
+					                -->
+			<div id="pizzamobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_pizza()"></i>
+					</div>
+				    <div class="col-10">
+					    <h2 class="submenuheadings">CREATE YOUR OWN PIZZA</h2>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+					    <div class="pizza_size_mobile">
+						    Medium
+						</div>
+						<div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_size_mobile">
+						    Large
+						</div>
+						<div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_size_mobile">
+						    X-Large
+						</div>
+						<div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_size_mobile">
+						    Jumbo
+						</div>
+						<div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3">
+					    <div class="pizza_price_mobile">
+						    10.99 (2.70)
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_price_mobile">
+						    12.99 (3.00)
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_price_mobile">
+						    14.99 (3.30)
+						</div>
+					</div>
+					<div class="col-3">
+					    <div class="pizza_price_mobile">
+						    16.99 (3.70)
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <div class="sauces_mobile">
+						    Toppings:
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+					    <div class="sauces_selection_mobile">
+					        Extra Cheese, Bacon, Banana Peppers, Black Olives, Broccoli, Garlic, Green Peppers, Ham,
+							Meatballs, Mushrooms, Onions, Pepperoni, Pineapple, Sausage, Spinach, Tomatoes
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SPECIALTY PIZZA</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Alfredo Chicken Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Grilled chicken, alfredo sauce, parmesan, &amp; Italian spice
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Alfredo Shrimp Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Shrimp, alfredo sauce, parmesan, &amp; Italian spice
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    BBQ Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Grilled chicken and BBQ sauce
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Bianca Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Fresh garlic, ricotta cheese, &amp; mozzarella cheese (no red sauce)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    15.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Bruschetta Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Feta cheese, mozzarella cheese, fresh garlic, diced tomato, &amp; basil (no red sauce)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    20.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Carbonara Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Bacon, olive oil, eggs, garlic, &amp; onions
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    18.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Deluze Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Pepperoni, sausage, mushrooms, onions, green peppers, &amp; black olives
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Deluxe Chicken Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Grilled chicken, onions, green peppers, mushrooms, black olives, &amp; fresh garlic
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    18.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Shrimp Chicken Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Shrimp, onions, green peppers, mushrooms, black olives, &amp; fresh garlic
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    18.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    20.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Greek Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Feta cheese, diced tomato, spinach, fresh garlic, &amp; mozzarella
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    20.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Hawaiian Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Ham &amp; pineapple
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Meat Lover's Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Ham, bacon, pepperoni, &amp; sausage
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    15.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    26.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Steak Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Steak, onions, &amp; green peppers
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    18.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Tomato &amp; Basil Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Tomato slices, fresh basil, &amp; fresh garlic (red sauce optional)
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    19.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Veggie Lover's Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    12"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Tomato, green peppers, onions, spinach, broccoli, mushrooms, fresh garlic, &amp; black olives
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    18.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    21.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">STUFFED PIZZA</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Deluxe Stuffed Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Ham, salami, pepperoni, provolone, green peppers, onions, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    27.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    31.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    34.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+					    <div class="pizza_item_mobile">
+						    Meat Lover's Stuffed Pizza
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Ham, pepperoni, sausage, bacon, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    27.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    31.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    34.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-8">
+					    <div class="pizza_item_mobile">
+						    Veggie Lover's Stuffed Pizza
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    14"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    16"
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size_mobile">
+						    18"
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+					<div class="col-7">
+					    <div class="pizza_description_mobile">
+						    Spinach, broccoli, mushrooms, green peppers, onions, fresh garlic, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    25.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    29.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_price_mobile">
+						    32.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			        ROLLS
+					
+					        -->
+			<div id="rollsdesktop" class="d-none d-md-block">
+			    <div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <a id="rolls"><h1 class="menuheadings">CALZONES, ROLLS, &amp; STROMBOLIS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">CREATE YOUR OWN CALZONE OR STROMBOLI</h2>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-3">
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+				            Small
+					    </div>
+						<div class="wings_price">
+						    8.99 (1.50)
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+				            Medium
+					    </div>
+						<div class="wings_price">
+						    12.99 (2.00)
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="wings_size">
+				            Large
+					    </div>
+						<div class="wings_price">
+						    15.99 (2.20)
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="sauces">
+						    Toppings:
+						</div>
+						<div class="wings_sauces">
+					        Bacon, Banana Peppers, Black Olives, Broccoli, Garlic, Green Peppers, Ham,
+					        Meatballs, Mushrooms, Onions, Pepperoni, Pineapple, Sausage, Spinach, Tomatoes
+					    </div>
+					</div>
+					<div class="col-3">
+					</div>	
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">CALZONES</h2>
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Specialty Calzone
+						</div>
+						<div class="pizza_description">
+					        Pepperoni, sausage, mushrooms, onions, green peppers, ricotta, &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        12.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        17.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Meat Lover's Calzone
+						</div>
+						<div class="pizza_description">
+					        Bacon, ham, meatballs, pepperoni, sausage, ricotta, <br>&amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        12.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        17.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Veggie Calzone
+						</div>
+						<div class="pizza_description">
+					        Broccoli, garlic, green peppers, mushrooms, onions, spinach, ricotta, &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        10.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        15.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">STROMBOLIS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Specialty Stromboli
+						</div>
+						<div class="pizza_description">
+					        Pepperoni, sausage, mushrooms, onions, green peppers, <br>&amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        12.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        17.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Meat Lover's Stromboli
+						</div>
+						<div class="pizza_description">
+					        Bacon, ham, meatballs, pepperoni, sausage, <br>&amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        12.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        17.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+						    Veggie Stromboli
+						</div>
+						<div class="pizza_description">
+					        Broccoli, garlic, green peppers, mushrooms, onions, spinach, &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        10.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        15.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        21.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">ROLLS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Pepperoni Roll
+						</div>
+						<div class="pizza_description">
+					        Pepperoni &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        9.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        11.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        14.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Sausage Roll
+						</div>
+						<div class="pizza_description">
+					        Sausage &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        9.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        11.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        14.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Broccoli Roll
+						</div>
+						<div class="pizza_description">
+					        Broccoli &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        9.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        11.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        14.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-4">
+					    <div class="pizza_item">
+					        Spinach Roll
+						</div>
+						<div class="pizza_description">
+					        Spinach &amp; mozzarella cheese
+					    </div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Small
+						</div>
+						<div class="pizza_price">
+					        9.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Medium
+						</div>
+						<div class="pizza_price">
+					        11.99
+					    </div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    Large
+						</div>
+						<div class="pizza_price">
+					        14.99
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+			</div>
+			
+			<!--
+			
+			        ROLLS        
+					            -->
+			<div id="rollsmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_rolls()"></i>
+					</div>
+				    <div class="col-10">
+			            <h2 class="submenuheadings">CREATE YOUR OWN CALZONE OR STROMBOLI</h2>
+				    </div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+					    <div class="rolls_sizes_mobile">
+						    Small
+						</div>
+					</div>
+					<div class="col-4">
+					    <div class="rolls_sizes_mobile">
+						    Medium
+						</div>
+					</div>
+					<div class="col-4">
+					    <div class="rolls_sizes_mobile">
+						    Large
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+					    <div class="rolls_prices_mobile">
+						    8.99 (1.50)
+						</div>
+					</div>
+					<div class="col-4">
+					    <div class="rolls_prices_mobile">
+						    12.99 (2.00)
+						</div>
+					</div>
+					<div class="col-4">
+					    <div class="rolls_prices_mobile">
+						    15.99 (2.20)
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <div class="sauces_mobile">
+						    Toppings:
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+					    <div class="sauces_selection_mobile">
+					        Bacon, Banana Peppers, Black Olives, Broccoli, Garlic, Green Peppers, Ham,
+							Meatballs, Mushrooms, Onions, Pepperoni, Pineapple, Sausage, Spinach, Tomatoes
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+			            <h2 class="submenuheadings">CALZONES</h2>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Specialty Calzone
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Pepperoni, sausage, mushrooms, onions, green peppers, ricotta, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Meat Lover's Calzone
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Bacon, ham, meatballs, pepperoni, sausage, ricotta, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Veggie Calzone
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Broccoli, garlic, green peppers, mushrooms, onions, spinach, ricotta, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    10.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    15.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+			            <h2 class="submenuheadings">STROMBOLIS</h2>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Specialty Stromboli
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Pepperoni, sausage, mushrooms, onions, green peppers, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Meat Lover's Stromboli
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Bacon, ham, meatballs, pepperoni, sausage, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Veggie Stromboli
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:14vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Broccoli, garlic, green peppers, mushrooms, onions, spinach, &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    10.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    15.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    21.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+			            <h2 class="submenuheadings">ROLLS</h2>
+				    </div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Pepperoni Roll
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Pepperoni &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    14.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Sausage Roll
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Sausage &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    14.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Broccoli Roll
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Broccoli &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    14.99
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-6">
+					    <div class="rolls_item_mobile">
+						    Spinach Roll
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Sm
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Md
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_size_mobile">
+						    Lg
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-6">
+					    <div class="rolls_description_mobile">
+						    Spinach &amp; mozzarella cheese
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="rolls_item_price_mobile">
+						    14.99
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    SALADS
+				        
+						-->
+			<div id="saladsdesktop" class="d-none d-md-block">
+			    <div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <a id="salads"><h1 class="menuheadings">SALADS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SALADS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Garden Tossed Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Antipasto Salad
+							<p class="description">Ham, salami, &amp; provolone cheese</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Caesar Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chef's Salad
+							<p class="description">Ham, turkey, &amp; provolone cheese</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Italian Salad
+							<p class="description">Ham, turkey, salami, &amp; provolone cheese</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    10.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tuna Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Greek Salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Add chicken to any salad
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    5.00
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:3vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="sauces">
+						    Sauces:
+						</div>
+						<div class="wings_sauces">
+						    Italian Vinaigrette, Ranch, Caesar, Bleu Cheese,
+					        French, Thousand Island, Honey Mustard
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			        SALADS MOBILE
+					        
+							        -->
+			<div id="saladsmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_salads()"></i>
+					</div>
+			        <div class="col-10">
+				        <h2 class="submenuheadings">SALADS</h2>
+				    </div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Garden Tossed Salad
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    5.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Antipasto Salad
+						</div>
+						<p class="addition_mobile">Ham, salami, &amp; provolone cheese</p>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Caesar Salad
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Chef's Salad
+						</div>
+						<p class="addition_mobile">Ham, turkey, &amp; provolone cheese</p>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Italian Salad
+						</div>
+						<p class="addition_mobile">Ham, turkey, salami, &amp; provolone cheese</p>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    10.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Tuna Salad
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Greek Salad
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:9vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="app_item_mobile">
+						    Add chicken to any salad
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="app_price_mobile">
+						    5.00
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <div class="sauces_mobile">
+						    Dressings:
+						</div>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-1">
+					</div>
+					<div class="col-10">
+					    <div class="sauces_selection_mobile">
+						    Italian Vinaigrette, Ranch, Caesar, Bleu Cheese, French, Thousand Island, Honey Mustard
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+			</div>
+			<!--
+			
+			    SUBS
+				    
+					-->
+			<div id="subsdesktop" class="d-none d-md-block">
+			    <div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <a id="subs"><h1 class="menuheadings">SUBS &amp; WRAPS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">HOT SUBS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Meatball Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Sausage Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Eggplant Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Sausage, Peppers, &amp; Onions Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cheesesteak Sub
+							<p class="description">Mushrooms, peppers, &amp; onions</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cheesesteak Italiano Sub
+							<p class="description">Mushrooms, peppers, onions, &amp; marinara sauce</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cheesesteak Mediterranean Sub
+							<p class="description">Onions, lettuce, tomatoes, &amp; mayo</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Philly Chicken Sub
+							<p class="description">Mushrooms, peppers, &amp; onions</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cuban Sandwich
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    10.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Grilled Chicken Sub
+							<p class="description">Lettuce, tomatoes, onions, &amp; mayo</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fried Chicken Sandwich
+							<p class="description">Lettuce, tomatoes, onions, &amp; mayo</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chicken Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">COLD SUBS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:1vw;">
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Italian Sub
+							<p class="description">Ham, salami, &amp; provolone</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    8.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Ham &amp; Cheese Sub
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Turkey &amp; Cheese Sub
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    8.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tuna Sub
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Combo Sub
+							<p class="description">Ham, salami, turkey, provolone cheese, <br>&amp; Italian dressing</p>
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    8.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">WRAPS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Steak Wrap
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chicken Wrap
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Turkey Wrap
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Veggie Wrap
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			
+			<!--
+			
+			    SUBS MOBILE
+				    
+					        -->
+			<div id="subsmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_subs()"></i>
+					</div>
+				    <div class="col-md-10">
+			            <h2 class="submenuheadings">HOT SUBS</h2>
+				    </div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="subs_item_mobile">
+					        Meatball Parmigiana
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="subs_item_mobile">
+					        Sausage Parmigiana
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="subs_item_mobile">
+					        Eggplant Parmigiana
+					    </div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Sausage, Peppers, &amp; Onions Parmigiana
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Cheesesteak Sub
+					    </div>
+						<p class="subs_description_mobile">Mushrooms, peppers, &amp; onions</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Cheesesteak Italiano Sub
+					    </div>
+						<p class="subs_description_mobile">Mushrooms, peppers, onions, &amp; marinara sauce</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Cheesesteak Mediterranean Sub
+					    </div>
+						<p class="subs_description_mobile">Onions, lettuce, tomatoes, &amp; mayo</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Philly Chicken Sub
+					    </div>
+						<p class="subs_description_mobile">Mushrooms, peppers, &amp; onions</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Cuban Sandwich
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    10.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Grilled Chicken Sub
+					    </div>
+						<p class="subs_description_mobile">Lettuce, tomatoes, onions, &amp; mayo</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Fried Chicken Sandwich
+					    </div>
+						<p class="subs_description_mobile">Lettuce, tomatoes, onions, &amp; mayo</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Chicken Parmigiana
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    9.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-md-12">
+			            <h2 class="submenuheadings">COLD SUBS</h2>
+				    </div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Italian Sub
+					    </div>
+						<p class="subs_description_mobile">Ham, salami, &amp; provolone cheese</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Ham &amp; Cheese Sub
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Turkey &amp; Cheese Sub
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Tuna Sub
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Combo Sub
+					    </div>
+						<p class="subs_description_mobile">Ham, salami, turkey, provolone cheese, &amp; Italian dressing</p>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    8.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-md-12">
+			            <h2 class="submenuheadings">WRAPS</h2>
+				    </div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Steak Wrap
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Chicken Wrap
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Turkey Wrap
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:12vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="subs_item_mobile">
+					        Veggie Wrap
+					    </div>
+					</div>
+					<div class="col-2">
+					    <div class="subs_price_mobile">
+						    6.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    PASTA
+				
+				    -->
+			<div id="entreesdesktop" class="d-none d-md-block">
+			    <div class="row" style="height:1vw;">
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <a id="entrees"><h1 class="menuheadings">ENTR&Eacute;ES</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">PASTA</h2>
+					</div>
+				</div>
+				<div class="row" style="height:5vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="wings_sauces">
+						    Choose from: spaghetti, ziti, fettuccine, or linguine
+						</div>
+						<div class="wings_sauces">
+						    (all pastas served with a side salad &amp; garlic knot)
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Marinara
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    7.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Garlic &amp; Oil
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    7.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Meat Sauce
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Meatballs
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Sausage
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Pasta with Clam Sauce
+						</div>
+						<p class="description">white or red</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">ITALIAN ENTR&Eacute;ES</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="wings_sauces">
+						    (all entr&eacute;es served with a side salad and garlic knot)
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tortellini with Red Sauce
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tortellini Alfredo
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Sausage, Peppers, &amp; Onions
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fettucine Alfredo
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fettucine Carbonara
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fettucine Alfredo with Chicken
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    15.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fettucine Alfredo with Chicken &amp; Broccoli
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    16.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Fettucine Alfredo with Shrimp
+						</div>
+						<p class="description">with 8 shrimp</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chicken Marsala
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    16.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">BAKED ENTR&Eacute;ES</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-3">
+					</div>
+					<div class="col-6">
+					    <div class="wings_sauces">
+						    (all entr&eacute;es served with a side salad and garlic knot)
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Penne alla Vodka
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Baked Ziti
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cheese Ravioli
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    12.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Stuffed Shells
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    11.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Lasagna
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Manicotti
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    11.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chicken Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Combo Meat Pasta
+						</div>
+						<p class="description">Meatballs, sausage, pasta, &amp; cheese</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Combo Dinner
+						</div>
+						<p class="description">Lasagna, ravioli, manicotti, &amp; stuffed shells</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    14.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Eggplant Parmigiana
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Eggplant Rollatini
+						</div>
+						<p class="description">Spinach or ham</p>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    13.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    PASTA MOBILE
+				            
+							-->
+			<div id="pastamobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_entrees()"></i>
+					</div>
+			        <div class="col-10">
+			            <h2 class="submenuheadings">PASTA</h2>
+				    </div>
+					<div class="col-1">
+					</div>
+			    </div>
+				<div class="row">
+					<div class="col-12">
+					    <div class="pasta_selection_mobile">
+						    Choose from: spaghetti, ziti, fettuccine, &amp; linguine
+						</div>
+						<div class="pasta_selection_mobile">
+						    (all pastas served with a side salad &amp; garlic knot)
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Pasta with Marinara
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    7.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Pasta with Garlic &amp; Oil
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    7.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Pasta with Meat Sauce
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Pasta with Meatballs
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Pasta with Sausage
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Pasta with Clam Sauce
+						</div>
+						<p class="pasta_description_mobile">white or red</p>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+			        <div class="col-12">
+			            <h2 class="submenuheadings">ITALIAN ENTR&Eacute;ES</h2>
+				    </div>
+			    </div>
+				<div class="row">
+					<div class="col-12">
+						<div class="pasta_selection_mobile">
+						    (all entr&eacute;es served with a side salad &amp; garlic knot)
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Tortellini with Red Sauce
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Tortellini Alfredo
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Sausage, Peppers, &amp; Onions
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Fettucine Alfredo
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Fettucine Carbonara
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Fettucine Alfredo with Chicken
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    15.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Fettucine Alfredo with Chicken &amp; Broccoli
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Fettucine Alfredo with Shrimp
+						</div>
+						<p class="pasta_description_mobile">with 8 shrimp</p>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Chicken Marsala
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    16.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row">
+			        <div class="col-12">
+			            <h2 class="submenuheadings">BAKED ENTR&Eacute;ES</h2>
+				    </div>
+			    </div>
+				<div class="row">
+					<div class="col-12">
+						<div class="pasta_selection_mobile">
+						    (all entr&eacute;es served with a side salad &amp; garlic knot)
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Penne alla Vodka
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Baked Ziti
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Cheese Ravioli
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Stuffed Shells
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Lasagna
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Manicotti
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    11.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Chicken Parmigiana
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Combo Meat Pasta
+						</div>
+						<p class="pasta_description_mobile">Meatballs, sausage, pasta, &amp; cheese</p>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-8">
+					    <div class="pasta_item_mobile">
+						    Combo Dinner
+						</div>
+						<p class="pasta_description_mobile">Lasagna, ravioli, manicotti, &amp; stuffed shells</p>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    14.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Eggplant Parmigiana
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    12.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:10vw;">
+				    <div class="col-1">
+					</div>
+				    <div class="col-6">
+					    <div class="pasta_item_mobile">
+						    Eggplant Rollatini
+						</div>
+						<p class="pasta_description_mobile">Spinach or ham</p>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-2">
+					    <div class="pasta_price_mobile">
+						    13.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    DESSERTS    
+				
+				            -->
+			<div id="dessertsdesktop" class="d-none d-md-block">
+			    <div class="row">
+				    <div class="col-12">
+					    <a id="desserts"><h1 class="menuheadings">DESSERTS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">DESSERTS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    New York Cheesecake
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    4.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Chocolate Cake
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Cannoli
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    4.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+					<div class="col-3">
+					    <div class="app_item">
+						    Tiramisu
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    DESSERTS MOBILE
+				                
+								-->
+			<div id="dessertsmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_desserts()"></i>
+					</div>
+				    <div class="col-10">
+					    <h2 class="submenuheadings">DESSERTS</h2>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="dessert_item_mobile">
+						    New York Cheesecake
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="dessert_price_mobile">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="dessert_item_mobile">
+						    Chocolate Cake
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="dessert_price_mobile">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="dessert_item_mobile">
+						    Cannoli
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="dessert_price_mobile">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:8vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-8">
+					    <div class="dessert_item_mobile">
+						    Tiramisu
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="dessert_price_mobile">
+						    4.99
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    SPECIALS 
+				        
+						-->
+		    <div id="specialsdesktop" class="d-none d-md-block">
+			    <div class="row">
+				    <div class="col-12">
+					    <a id="specials"><h1 class="menuheadings">SPECIALS</h1></a>
+					</div>
+				</div>
+				<div class="row">
+				    <div class="col-12">
+					    <h2 class="submenuheadings">SPECIALS</h2>
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-6">
+					    <div class="app_item">
+						    12" 2-Topping Pizza, (2) 16oz. Sodas, &amp; Garlic Knots
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    17.99
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-6">
+					    <div class="app_item">
+						    (2) 14" 1-Topping Pizzas &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    23.99
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-6">
+					    <div class="app_item">
+						    (2) 16" 1-Topping Pizzas, 20 Wings, &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="app_item_price">
+						    47.99
+						</div>
+					</div>
+					<div class="col-3">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-5">
+					    <div class="app_item">
+						    1-Topping Pizza, 20 Wings, &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    14"
+						</div>
+						<div class="special_price">
+						    30.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    16"
+						</div>
+						<div class="special_price">
+						    32.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    18"
+						</div>
+						<div class="special_price">
+						    34.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				    <div class="col-2">
+					</div>
+					<div class="col-5">
+					    <div class="app_item">
+						    1 Cheese Pizza, 10 Wings, &amp; Free Garlic Knots
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    14"
+						</div>
+						<div class="special_price">
+						    22.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    16"
+						</div>
+						<div class="special_price">
+						    24.99
+						</div>
+					</div>
+					<div class="col-1">
+					    <div class="pizza_size">
+						    18"
+						</div>
+						<div class="special_price">
+						    26.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:2vw;">
+				</div>
+			</div>
+			
+			
+			<!--
+			
+			    SPECIALS MOBILE
+				
+				                -->
+			<div id="specialsmobile">
+			    <div class="row">
+				    <div class="col-1">
+					    <i class="fa-solid fa-arrow-left" onclick="hide_specials()"></i>
+					</div>
+				    <div class="col-10">
+					    <h2 class="submenuheadings">SPECIALS</h2>
+					</div>
+					<div class="col-1">
+					</div>
+				</div>
+				<div class="row" style="height:4vw;">
+				</div>
+				<div class="row" style="height:16vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-6">
+					    <div class="special_item_mobile">
+						    12" 2-Topping Pizza,
+						</div>
+						<div class="special_item_mobile">
+						    (2) 16 Oz. Sodas,
+						</div>
+                        <div class="special_item_mobile">
+						    &amp; Garlic Knots
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-2">
+					    <div class="special_price_mobile">
+						    17.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:16vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-6">
+					    <div class="special_item_mobile">
+						    (2) 14" 1-Topping Pizzas
+						</div>
+						<div class="special_item_mobile">
+						    &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-2">
+					    <div class="special_price_mobile">
+						    23.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:16vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-6">
+					    <div class="special_item_mobile">
+						    (2) 16" 1-Topping Pizzas,
+						</div>
+						<div class="special_item_mobile">
+						    20 Wings,
+						</div>
+						<div class="special_item_mobile">
+						    &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-1">
+					</div>
+					<div class="col-2">
+					    <div class="special_price_mobile">
+						    47.99
+						</div>
+					</div>
+					<div class="col-2">
+					</div>
+				</div>
+				<div class="row" style="height:16vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-5">
+					    <div class="special_item_mobile">
+						    1-Topping Pizza,
+						</div>
+						<div class="special_item_mobile">
+						    20 Wings,
+						</div>
+						<div class="special_item_mobile">
+						    &amp; (1) 2-Liter Soda
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    14"
+						</div>
+						<div class="special_price_mobile2">
+						    30.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    16"
+						</div>
+						<div class="special_price_mobile2">
+						    32.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    18"
+						</div>
+						<div class="special_price_mobile2">
+						    34.99
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+				</div>
+				<div class="row" style="height:16vw;">
+				    <div class="col-1">
+					</div>
+					<div class="col-5">
+					    <div class="special_item_mobile">
+						    Cheese Pizza,
+						</div>
+						<div class="special_item_mobile">
+						    10 Wings,
+						</div>
+						<div class="special_item_mobile">
+						    &amp; Free Garlic Knots
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    14"
+						</div>
+						<div class="special_price_mobile2">
+						    22.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    16"
+						</div>
+						<div class="special_price_mobile2">
+						    24.99
+						</div>
+					</div>
+					<div class="col-2">
+					    <div class="special_size_mobile">
+						    18"
+						</div>
+						<div class="special_price_mobile2">
+						    26.99
+						</div>
+					</div>
+					<div class="col-0">
+					</div>
+				</div>
+			</div>
+			<!--
+			
+			    FOOTER  
+				        
+						-->
+			<div class="row nyc_bg">
+			    <div class="col-md-2">
+				</div>
+				<div class="col-md-3">
+				    <div class="d-flex flex-column">
+					    <h3 class="footerheader">Our Location</h3>
+						<div class="d-inline-flex justify-content-center">
+						    <i class="fa-solid fa-location-dot align-self-center pr-2" style="height:2vw;"></i>
+						    <p class="contact_info">
+						        600 N US Hwy 17 92
+						        <br />
+						        Longwood, FL 32750
+						    </p>
+						</div>
+						<h3 class="footerheader">Contact Us</h3>
+						<div class="d-inline-flex justify-content-center">
+						    <i class="fa-solid fa-phone pt-1 pr-2"></i>
+						    <p class="contact_info">
+						    	(407) 695-8990
+						    </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-1">
+				</div>
+				<div class="col-md-6">
+				    <h3 class="footerheader2">Hours of Operations</h3>
+					<div class="d-inline-flex justify-content-center">
+					    <div class="hours_table1">
+						    <h4 class="inner_header">Take-Out</h4>
+							<table class="hours">
+							    <tr>
+								    <td class="days">Monday - Thursday</td>
+									<td class="times">11am - 8:45pm</td>
+								</tr>
+								<tr>
+								    <td class="days">Friday & Saturday</td>
+								    <td class="times">11am - 9:45pm</td>
+							    </tr>
+							    <tr>
+								    <td class="days">Sunday</td>
+								    <td class="times">Closed</td>
+							    </tr>
+							</table>
+						</div>
+					    <div class="hours_table2">
+						    <h4 class="inner_header">Delivery</h4>
+							<table class="hours">
+							    <tr>
+								    <td class="days">Monday - Thursday</td>
+									<td class="times">11am - 8:30pm</td>
+								</tr>
+								<tr>
+								    <td class="days">Friday & Saturday</td>
+								    <td class="times">11am - 9:30pm</td>
+							    </tr>
+							    <tr>
+								    <td class="days">Sunday</td>
+								    <td class="times">Closed</td>
+							    </tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-0">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
