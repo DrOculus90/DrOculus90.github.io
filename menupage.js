@@ -1,5 +1,19 @@
 //  menupage.js
 
+window.addEventListener("resize", function() {
+	var match = window.matchMedia("(min-width: 768)");
+	if (match.matches) {
+		appmenu.style.display = "none";
+		pizzamenu.style.display = "none";
+		rollsmenu.style.display = "none";
+		saladsmenu.style.display = "none";
+		subsmenu.style.display = "none";
+		entreesmenu.style.display = "none";
+		dessertsmenu.style.display = "none";
+		specialsmenu.style.display = "none";
+	}
+}
+
 function show_appetizers() {
 	var menunav = document.getElementById("mobilemenunavigation");
 	var appmenu = document.getElementById("appetizersmobile");
