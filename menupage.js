@@ -1,7 +1,7 @@
 //  menupage.js
 
 window.addEventListener("resize", function() {
-	var match = window.matchMedia("(min-width: 768)");
+	var match = window.matchMedia("(min-width: 768px)");
 	if (match.matches) {
 		appmenu.style.display = "none";
 		pizzamenu.style.display = "none";
