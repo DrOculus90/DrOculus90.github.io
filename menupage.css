@@ -400,6 +400,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#appetizersmobile {
+		display: none;
+	}
+}
+
 .app_item_mobile {
 	font-weight: bold;
 }
@@ -453,6 +459,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#pizzamobile {
+		display: none;
+	}
+}
+
 .pizza_size_mobile {
 	text-align: center;
 	font-weight: bold;
@@ -500,6 +512,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 /*  ROLLS MOBILE  */
 
 @media screen and (max-width: 767px) {
+	#rollsmobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	#rollsmobile {
 		display: none;
 	}
@@ -575,6 +593,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#saladsmobile {
+		display: none;
+	}
+}
+
 .app_price_mobile {
 	text-align: right;
 }
@@ -582,6 +606,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 /*  Subs mobile  */
 
 @media screen and (max-width: 767px) {
+	#subsmobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	#subsmobile {
 		display: none;
 	}
@@ -618,6 +648,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 /*  Pasta mobile  */
 
 @media screen and (max-width: 767px) {
+	#pastamobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	#pastamobile {
 		display: none;
 	}
@@ -666,6 +702,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 	}
 }
 
+@media screen and (min-width: 768px) {
+	#dessertsmobile {
+		display: none;
+	}
+}
+
 .dessert_item_mobile {
 	font-weight: bold;
 	font-size: 4vw;
@@ -681,6 +723,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 /*  Specials mobile  */
 
 @media screen and (max-width: 767px) {
+	#specialsmobile {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
 	#specialsmobile {
 		display: none;
 	}
