@@ -137,6 +137,6 @@ $(document).ready(function(){
 			dessertsmenu.style.display = "none";
 			specialsmenu.style.display = "none";
 		}
-	}
+	});
 	
 });
