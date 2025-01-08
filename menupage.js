@@ -125,7 +125,7 @@ $(document).ready(function(){
 	    }
 	}
 	
-	/*
+	
 	$(window).resize(function() {
 		if (match_big.matches) {
 			appmenu.style.display = "none";
@@ -138,5 +138,5 @@ $(document).ready(function(){
 			specialsmenu.style.display = "none";
 		}
 	}
-	*/
-}
+	
+});
