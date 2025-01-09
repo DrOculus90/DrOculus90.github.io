@@ -1,18 +1,4 @@
-//  menupage.js
-
-$(window).resize(function() {
-	var match_big = window.matchMedia("(min-width: 768px)");
-	if (match_big.matches) {
-		hide_appetizers();
-		hide_pizza();
-		hide_rolls();
-		hide_salads();
-		hide_subs();
-		hide_entrees();
-		hide_desserts();
-		hide_specials();
-    }
-});	
+//  menupage.js	
 
 function show_appetizers() {
 	var menunav = document.getElementById("mobilemenunavigation");
@@ -173,3 +159,17 @@ function hide_specials() {
 		specialsmenu.style.display = "none";
 	}
 }
+
+$(window).resize(function() {
+	var match_big = window.matchMedia("(min-width: 768px)");
+	if (match_big.matches) {
+		hide_appetizers();
+		hide_pizza();
+		hide_rolls();
+		hide_salads();
+		hide_subs();
+		hide_entrees();
+		hide_desserts();
+		hide_specials();
+    }
+});
