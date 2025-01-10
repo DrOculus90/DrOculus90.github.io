@@ -355,3 +355,17 @@ hr {
 	opacity: 0.25;
 	background-clip: border-box;
 }
+
+/*  footer  */
+
+@media screen and (min-width: 768px) {
+	.l_icon {
+		height: 2vw;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.l_icon {
+		height: 5vw;
+	}
+}
