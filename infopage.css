@@ -186,9 +186,14 @@
 }
 
 .footerheader2 {
-	text-align: center;
-	margin-left: -7.8vw;
 	color: DarkGreen;
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	.footerheader2 {
+		margin-left: -7.8vw;
+	}
 }
 
 .inner_header {
