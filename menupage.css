@@ -350,7 +350,12 @@ a.linkstyle:hover, a.linkstyle:visited, a.linkstyle:active {
 .footerheader2 {
 	color: DarkGreen;
 	text-align: center;
-	margin-left: -7.8vw;
+}
+
+@media screen and (min-width: 768px) {
+	.footerheader2 {
+		margin-left: -7.8vw;
+	}
 }
 
 .inner_header {
